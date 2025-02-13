@@ -14,12 +14,12 @@ pipeline {
             }
         }
         stage('Build Docker Image') {
-            steps {
-                script {
-                    sh '${DOCKER_TOOL}/docker build -t ${IMAGE_NAME} .'
-                }
-            }
+    steps {
+        script {
+            sh '"C:/Program Files/Docker/Docker/resources/bin/docker" build -t ${IMAGE_NAME} .'
         }
+    }
+}
         stage('Run Docker Container') {
             steps {
                 script {
