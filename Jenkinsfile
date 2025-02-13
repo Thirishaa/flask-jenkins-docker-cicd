@@ -23,7 +23,7 @@ pipeline {
         stage('Run Docker Container') {
             steps {
                 script {
-                    sh '${DOCKER_TOOL}/docker run -d -p 5000:5000 --name ${CONTAINER_NAME} ${IMAGE_NAME}'
+        "C:\Program Files\Docker\Docker\resources\bin\docker" run -d -p 5000:5000 --name flask-container flask-app
                 }
             }
         }
